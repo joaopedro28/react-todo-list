@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-color: #222435;
+    font-family: 'Roboto';
+}
+
+*:focus {
+    outline: none;
+}
+
+h1 {
+    font-weight: 900;
+    color: #7d83b9;
+    text-align: center;
+}
+
+.subtitle-block {
+    display: flex;
+    max-width: 500px;
+    margin: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.subtitle-block h2 {
+    font-weight: 800;
+    color: #7d83b9;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+
+.subtitle-block span {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 5px;
+    padding: 6px 8px;
+    margin: 0 10px;
+}
+
+.subtitle-block span.high {
+    order: 1;
+    background-color: #ff004c;
+}
+.subtitle-block span.medium {
+    order: 2;
+    background-color: #e6bd07;
+}
+.subtitle-block span.low {
+    order: 3;
+    background-color: #1d790a;
+}
+
+form {
+    display: flex;
+    max-width: 600px;
+    margin: 30px auto 60px;
+    justify-content: center;
+    position: relative;
+    gap: 0 8px;
+}
+
+input {
+    display: flex;
+    width: 70%;
+    height: 60px;
+    background-color: #2d3046;
+    border: none;
+    text-indent: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+select {
+    width: 15%;
+    background-color: #505585;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+}
+
+button.add {
+    width: 15%;
+    height: 61px;
+    background-color: #363b65;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 25px;
+}
+
+button.add:hover {
+    cursor: pointer;
+    background-color: #363f88;
+}
+
+
+.listaTarefas {
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #363b65;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.item:hover {
+    background-color: #151627;
+}
+
+.item span {
+    width: 100%;
+    color: #fff;
+    margin-right: 10px;
+    padding: 10px 15px;
+    text-align: start;
+}
+
+.item.completo {
+    border: none;
+    background-color: #1e1f2e;
+}
+
+.item.completo span {
+    color: #4d506e;
+    text-decoration: line-through;
+    opacity: .5;
+}
+
+.item.high {
+    order: 1;
+    border: 1px solid #ff004c;
+}
+.item.medium {
+    order: 2;
+    border: 1px solid #e6bd07;
+}
+.item.low {
+    order: 3;
+    border:1px solid #1d790a;
+}
+
+.item button {
+    border: none;
+    background-color: transparent;
+    color: #4d506e;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color .4s ease;
+}
+
+.item button:hover {
+    background-color: #ff004c;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color .4s ease;
+}
+
+button.delAll {
+    border: 1px solid #ff004c;
+    background: none;
+    padding: 15px;
+    color: #ff004c;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color .4s ease;
+    cursor: pointer;
+    margin-top: 15px;
+    order: 99999;
+}
+
+button.delAll:hover {
+    background-color: #ff004c;
+    transition: background-color .4s ease;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    form {
+        width: 100%;
+    }
+
+    .listaTarefas {
+        width: 100%;
+    }
+}
